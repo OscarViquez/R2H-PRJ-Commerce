@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* ================================================================================================================== */
+/* FILE LAYOUT */
+/* ================================================================================================================== */
+/* 
+  1. ____ Imported Google Font | Line: 28
+  2. ____ Root: Where variables are kept | Line: 311
+  3. ____ CSS Reset | Line: 346
+  4. ____ Reusable Components CSS
+        |________ Button | Line: 368
+  5. ____ Custom CSS for Sections
+        |________ Button | Line: 368
+
+*/
+/* ================================================================================================================== */
+
+:root {
+  /* 01 TYPOGRAPHY  */
+  --font-family-main: "Poppins", sans-serif;
+  --fs-nav-links-btns: 15px;
+  --fs-nav-icons: 15px;
+  --fs-h1: 12px;
+  --fs-h2: 12px;
+  --fs-h3: 12px;
+  --fs-p: 12px;
+
+  /* 02 BACKGROUND COLORS */
+  --navigation-bg-color: #ffffff;
+
+  /* 03 TEXT COLORS */
+  --text-color-dark-bg: #ffffff;
+  --text-heading-color-light-bg: #000000;
+  --text-color-light-bg: #212a2f;
+
+  /* 04 BOX SHADOWS */
+  --navigation-box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 24px 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li,
+a {
+  text-decoration: none;
+  list-style-type: none;
+  color: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family-main);
+}
+
+/* NAVIGATION BAR */
+/* ======================================================= */
+header {
+  width: 100%;
+  padding: 0 1rem;
+
+  position: sticky;
+  z-index: 300;
+  top: 0;
+  box-shadow: var(--navigation-box-shadow);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
+}
+
+.header-logo {
+  object-fit: cover;
+ 
+}
+
+#header-logo__image {
+    width: 120px;
+}
+
+.nav-list {
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 1rem;
+}
+
+.nav__link {
+  color: var(--clr-primary);
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.nav__link img:hover {
+  transform: scale(1.2);
+}
+
+#nav__link--user {
+    width: 20px;
+}
+
+.nav__menu-button {
+  border: none;
+  background-color: none;
+  cursor: pointer;
+  width: 20px;
+}
+
+.nav__menu-button:hover {
+  transform: scale(1.2);
+}
+
+.nav-mobile-menu {
+  background-color: #ffffff;
+  position: fixed;
+  inset: 0;
+  top: 5rem;
+  width: 100%;
+  height: fit-content;
+  display: none;
+  z-index: 300;
+}
+
+.nav-mobile-menu-wrapper {
+  margin: 0 1.5rem;
+  background-color: #ffffff;
+}
+
+.nav-mobile__button {
+  width: 100%;
+  padding: 1rem 0;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 2px;
+  background: none;
+
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-mobile__button:hover {
+  border: 2px solid hsl(0, 0%, 11%);
+  transition: border linear 0.2s;
+}
+
+.nav-mobile__link {
+  display: block;
+  padding: 1rem 0;
+  text-align: center;
+  border: 2px solid white;
+  border-radius: 2px;
+
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.nav-mobile__link:hover {
+  border: 2px solid black;
+}
+
+@media (max-width: 800px) {
+  .nav__link--mobile-hidden {
+    display: none;
+  }
+
+  .nav-mobile-menu {
+    display: none;
+  }
+
+  .nav-item {
+    margin: 0 0 0 1.5rem;
+  }
+}
+
+@media (max-width: 620px) {
+  .header-wrapper {
+    justify-content: space-between;
+  }
+}
+
