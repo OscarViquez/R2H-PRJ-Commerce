@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /* ================================================================================================================== */
 /* FILE LAYOUT */
 /* ================================================================================================================== */
@@ -17,10 +16,12 @@
 
 :root {
   /* 01 TYPOGRAPHY  */
-  --font-family-main: "Poppins", sans-serif;
+  --font-family-primary: "Montserrat", sans-serif;
+  --font-family-secondary: "Inter", sans-serif;
+
   --fs-nav-links-btns: 15px;
   --fs-nav-icons: 15px;
-  --fs-h1: 12px;
+  --fs-h1: clamp(2.1rem, calc(1.45rem + 2.18vw), 3rem);
   --fs-h2: 12px;
   --fs-h3: 12px;
   --fs-p: 12px;
@@ -54,19 +55,15 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: var(--font-family-main);
-}
-
 /* NAVIGATION BAR */
 /* ======================================================= */
 header {
   width: 100%;
   padding: 0 1rem;
-
   position: sticky;
   z-index: 300;
   top: 0;
+  background: hsl(0, 0%, 100%);
   box-shadow: var(--navigation-box-shadow);
 }
 
@@ -75,18 +72,17 @@ header {
   justify-content: space-between;
   align-items: center;
 
-  max-width: 1400px;
+  max-width: 97%;
   margin: 0 auto;
   padding: 1.5rem 0;
 }
 
 .header-logo {
   object-fit: cover;
- 
 }
 
 #header-logo__image {
-    width: 120px;
+  width: 120px;
 }
 
 .nav-list {
@@ -95,6 +91,7 @@ header {
 
 .nav-item {
   margin: 0 1rem;
+  font-family: var(--font-family-secondary);
 }
 
 .nav__link {
@@ -114,7 +111,7 @@ header {
 }
 
 #nav__link--user {
-    width: 20px;
+  width: 20px;
 }
 
 .nav__menu-button {
@@ -179,7 +176,7 @@ header {
 }
 
 @media (max-width: 800px) {
-  .nav__link--mobile-hidden {
+  .nav-item--mobile-hidden {
     display: none;
   }
 
@@ -198,3 +195,87 @@ header {
   }
 }
 
+/* ======================================================= */
+/* HERO SECTION*/
+/* ======================================================= */
+
+.hero {
+  display: grid;
+  place-items: center;
+  margin: 1.6rem 0;
+}
+
+.hero-wrapper {
+  background-color: hsl(0, 0%, 10%);
+  background: url("/assets/images/home-hero-bg-2.webp");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  width: 97%;
+  height: 75vh;
+}
+
+.hero-overlay {
+  max-width: 700px;
+  position: relative;
+  inset: 65% 0 0 2%;
+  margin-right: 0.8rem;
+  font-family: var(--font-family-secondary);
+}
+
+.hero__title {
+  font-family: var(--font-family-primary);
+  font-size: var(--fs-h1);
+  font-weight: 600;
+  color: hsl(0, 0%, 11%);
+  line-height: 1;
+}
+
+.hero-buttons {
+  margin: 1.7rem 0;
+  display: inline-flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.hero__button {
+  cursor: pointer;
+  display: inline-block;
+  width: 270px;
+  padding: 10px 0;
+
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  border: 2px solid hsl(0, 0%, 7%);
+  border-radius: 2px;
+  background: #ffffff;
+  transition: border linear 0.11s;
+}
+
+.hero__button:hover {
+  transform: translate(5px, -5px);
+  border: 2px solid hsl(0, 0%, 7%);
+  border-radius: 6px 5px 6px 2px;
+  border-bottom: 8px solid hsl(0, 0%, 7%);
+  border-left: 8px solid hsl(0, 0%, 7%);
+  transition: border linear 0.17s;
+}
+
+@media (max-width: 800px) {
+  .hero-wrapper {
+    height: 60vh;
+    background-position: 35% 0%;
+  }
+
+  .hero-overlay {
+    inset: 30% 0 0 5px;
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-flow: column;
+  }
+}
