@@ -7,24 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Drink Depot </title>
 
-    <!-- META DATA FOR SEO >> GOOGLE DESCRIPTION  -->
-    <!-- ..................................................................... -->
-    <!-- <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-
-    <meta property="og:image" content="">
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="627" />
-    <meta property="og:title" content="" />
-    <meta property='og:description' content="" />
-    <meta property='og:url' content="" /> -->
-
-    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/favicons/site.webmanifest"> -->
-
     <!-- CSS FILES  -->
     <!-- ..................................................................... -->
     <link rel="stylesheet" href="css/style.css">
@@ -53,23 +35,18 @@
             <nav aria-label="primary navigation">
                 <ul class="nav-list">
                     <li class="nav-item  nav-item--mobile-hidden">
-                        <a href="https://taika.co/" class="nav__link">
-                            Bundles
+                        <a href="index.html" class="nav__link">
+                           Home
                         </a>
                     </li>
                     <li class="nav-item  nav-item--mobile-hidden">
-                        <a href="https://taika.co/" class="nav__link">
-                            Coffee
+                        <a href="/pages/collection.html" class="nav__link">
+                            Shop
                         </a>
                     </li>
                     <li class="nav-item nav-item--mobile-hidden">
-                        <a href="https://taika.co/" class="nav__link">
-                            Juices
-                        </a>
-                    </li>
-                    <li class="nav-item nav-item--mobile-hidden">
-                        <a href="https://taika.co/" class="nav__link">
-                            FAQ
+                        <a href="/pages/contactus.html" class="nav__link">
+                            Contact us
                         </a>
                     </li>
                     <li class="nav-item">
@@ -93,28 +70,7 @@
             </nav>
         </div>
 
-        <aside class="nav-mobile-menu">
-            <div class="nav-mobile-menu-wrapper">
-                <ul>
-                    <li class="nav-mobile-item">
-                        <button class="nav-mobile__button">
-                            Bundles
-                        </button>
-                    </li>
-                    <li class="nav-mobile-item">
-                        <button class="nav-mobile__button">
-                            Coffee
-                        </button>
-                    </li>
-                    <li class="nav-mobile-item">
-                        <a href="https://taika.co/" class="nav-mobile__link">
-                            Juices
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </aside>
-
+        
     </header>
 
     <!-- MAIN START  -->
@@ -128,18 +84,71 @@
                     <h1 class="hero__title">
                         This is a value prop will persuade you to buy
                     </h1>
-                    <div class="hero-buttons">
-                        <a href="#" class="hero__button">
-                            Shop Now
-                        </a>
-                        <a href="#" class="hero__button">
-                            Shop Now
-                        </a>
+                    <div class="hero-button-wrapper button-lg-wrapper">
+                        <span class="button-shadow">
+                            <a href="#" class="button-lg">
+                                Contact Us
+                            </a>
+                        </span>
                     </div>
                 </div>
-
             </div>
+        </section>
 
+        <section class="about">
+            <div class="about-wrapper">
+                <div class="about-wrapper-img">
+                    <img src="/assets/images/home-about-1.webp" alt="#">
+                </div>
+                <div class="about-wrapper-text">
+                    <h2 class="about__title">
+                        This is a Title That will explain
+                    </h2>
+                    <p class="about__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum, animi excepturi eligendi
+                        explicabo veniam accusamus debitis tempore officiis ut dignissimos quis eaque possimus saepe
+                        iste beatae ipsam hic suscipit!
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="about">
+            <div class="about-wrapper about-wrapper-reverse ">
+                <div class="about-wrapper-img">
+                    <img src="/assets/images/home-about-1.webp" alt="#">
+                </div>
+                <div class="about-wrapper-text">
+                    <h2 class="about__title">
+                        This is a Title That will explain
+                    </h2>
+                    <p class="about__desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse harum, animi excepturi eligendi
+                        explicabo veniam accusamus debitis tempore officiis ut dignissimos quis eaque possimus saepe
+                        iste beatae ipsam hic suscipit!
+                    </p>
+
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CARDS -->
+        <!-- ================================================================ -->
+        <section class="cta">
+            <div class="cta-wrapper">
+                <h2 class="cta__title">
+                    Any questions? Don't hesitate.<br> Contact us!
+                </h2>
+                <div class="cta-button button-lg-wrapper">
+                    <span class="button-shadow">
+                        <a href="#" class="button-lg">
+                            Contact Us
+                        </a>
+                    </span>
+                </div>
+            </div>
         </section>
 
     </main>
@@ -147,7 +156,48 @@
     <!-- FOOTER START  -->
     <!-- ================================================================ -->
     <footer>
-        
+        <div class="footer-container footer-logo ">
+            <h2 class="footer__title">Drink Depot</h2>
+        </div>
+        <nav class="footer-container footer-pages">
+            <ul class="footer-list footer-page-list">
+                <li class="footer-item footer-page-item">
+                    <a href="/index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li class="footer-item footer-page-item">
+                    <a href="/pages/collection.html">
+                        Shop
+                    </a>
+                </li>
+
+
+                <li class="footer-item footer-page-item">
+                    <a href="/pages/contactus.html">
+                        Contact us
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <ul class="footer-container footer-list footer-socials-list">
+            <li class="footer-item footer-socials-item">
+                <a href="https://www.google.com/" aria-label="Facebook" class="fa-brands fa-facebook">
+
+                </a>
+            </li>
+            <li class="footer-item footer-socials-item">
+                <a href="https://www.google.com/" aria-label="Twitter" class="fa-brands fa-twitter">
+
+                </a>
+            </li>
+            <li class="footer-item footer-socials-item">
+                <a href="https://www.google.com/" aria-label="Instagram" class="fa-brands fa-instagram">
+
+                </a>
+            </li>
+        </ul>
     </footer>
 
 </body>
